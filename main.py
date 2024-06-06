@@ -1,10 +1,10 @@
 import streamlit as st
 import cv2
 import numpy as np
-from tensorflow.keras.models import load_model
+import keras
 
 # Load the trained model
-model = load_model('mnist_model_3.keras')
+model = keras.saving.load_model('mnist_model_4.keras')
 
 
 # Function to preprocess the image for prediction

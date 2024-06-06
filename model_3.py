@@ -1,12 +1,12 @@
 import tensorflow as tf
-from tensorflow.keras.datasets import mnist
+import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 # Load the MNIST dataset
-(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+(train_images, train_labels), (test_images, test_labels) = keras.datasets.mnist.load_data()
 
 # Preprocess the data
 train_images = train_images.reshape((60000, 28, 28, 1)).astype('float32') / 255
